@@ -1,3 +1,5 @@
+<?php include('includes/header.php');  ?>
+
 
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Dashboard</li>
@@ -39,3 +41,6 @@
                                     </div>
                                 </div>
 
+
+
+<?php include('includes/footer.php');  ?>

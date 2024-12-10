@@ -8,7 +8,7 @@
         <div class="nav">
             
             <div class="sb-sidenav-menu-heading">Core</div>
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="index.php">
                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                 Dashboard
             </a>
@@ -62,7 +62,7 @@
                 data-bs-toggle="collapse" 
                 data-bs-target="#collapseAdmins" aria-expanded="false" 
                 aria-controls="collapseAdmins">
-                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                <div class="sb-nav-link-icon"><i class="fa-regular fa-user"></i></i></div>
                 Admins/Staff
                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
             </a>
