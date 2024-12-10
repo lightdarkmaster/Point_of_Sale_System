@@ -5,14 +5,15 @@ include('../config/functions.php');
 if(isset($_POST['saveAdmin'])){
 
     $name = validate($_POST['name']);
-    $email = validate($POST['email']);
-    $password =validate($POST['password']);
-    $phone = validate($POST['phone']);
-    $isBan = validate($POST['is_ban']) == true ? 1:0;
+    $email = validate($_POST['email']);
+    $password = validate($_POST['password']);
+    $phone = validate($_POST['phone']);
+    $is_ban = validate($_POST['is_ban']) == true ? 1:0;
 
-    if($name != '' && $email !='' && $password !=''){
+    if($name != '' && $email != '' && $password != ''){
 
         $emailCheck = mysqli_query($conn, "SELECT * FROM admins WHERE email='$email'");
+
         if($emailCheck){
             if(mysqli_num_rows($emailCheck) > 0){
                 redirect('admins-create.php', 'Email Already Exists. ');
@@ -28,7 +29,8 @@ if(isset($_POST['saveAdmin'])){
             'phone' => $phone,
             'is_ban' => $is_ban
         ];
-        $result = insert('admins', $data);
+
+        $result = insert('admins',$data);
         if($result){
             redirect('admins.php', 'Admin Created Sucessfully');
         }else{
