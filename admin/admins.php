@@ -21,9 +21,33 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php  
+                    $admins = getAll('admins');
+                    if(mysqli_num_rows($admins) > 0){
+
+                    ?>
+                    <?php 
+                        foreach($admins as $adminItem)  : 
+                    ?>
                     <tr>
-                        <td></td>
+                        <td><?= $adminItem['id']   ?></td>
+                        <td><?= $adminItem['name']   ?></td>
+                        <td><?= $adminItem['email']   ?></td>
+                        <td>
+                            <a href="admins-edit.php"class="btn btn-success btn-sm">Edit</a>
+                            <a href="admins-delete.php" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
                     </tr>
+                    <?php endforeach; ?>
+                    <?php 
+                    }else{
+                        ?>
+                        <tr>
+                        <td colspan="4"> No Records Found</td>
+                    </tr>
+                    <?php
+                    }
+                    ?>
                 </tbody>
             </table>
         </div>

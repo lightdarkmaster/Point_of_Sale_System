@@ -3,138 +3,98 @@ session_start();
 
 require 'dbcon.php';
 
-//pag validate han data
-function validate($inputData){
+function validate($inputData) {
     global $conn;
-    $validatedData = mysqli_real_escape_string($conn, $inputData);
-    return trim($validatedData);
+    if (isset($inputData) && is_string($inputData)) {
+        $validatedData = mysqli_real_escape_string($conn, $inputData);
+        return trim($validatedData);
+    }
+    return $inputData;
 }
 
-//pag redirect tikang ha usa na page ha iba na page
-function redirect($url, $status){
+function redirect($url, $status) {
     $_SESSION['status'] = $status;
-    header('Location: '.$url);
+    header('Location: ' . $url);
     exit(0);
 }
 
-
-//pag display message or status pagkatapos hin bisan ano na process
-function alertMessage(){
-    if(isset($_SESSION['status'])){
-         $_SESSION['status'];
-         echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-                    <h6>'.$_SESSION['status'].'</h6>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+function alertMessage() {
+    if (isset($_SESSION['status'])) {
+        echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <h6>' . $_SESSION['status'] . '</h6>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>';
         unset($_SESSION['status']);
+    }
 }
-}
 
-
-//Pag insert hin record
-
-function insert($tableName, $data){
-
+function insert($tableName, $data) {
     global $conn;
 
-    $table = validate($tableName);
-
     $columns = array_keys($data);
-    $values = array_keys($data);
+    $values = array_values($data);
 
     $finalColumn = implode(',', $columns);
-    $finalValues = "'".implode("', '",$values)."'";
+    $finalValues = "'" . implode("', '", array_map('validate', $values)) . "'";
 
-    $query = "INSERT INTO $table () VALUES ($finalValues)";
+    $query = "INSERT INTO $tableName ($finalColumn) VALUES ($finalValues)";
     $result = mysqli_query($conn, $query);
     return $result;
 }
 
-//pag update han data
-function update($tableName, $id, $data){
-    
+function update($tableName, $id, $data) {
     global $conn;
-
-    $table = validate($tableName);
-    $id = validate($id);
 
     $updateDataString = "";
 
-    foreach($data as $column => $value){
-
-        $updateDataString .=$column.'='."'value',";
+    foreach ($data as $column => $value) {
+        $updateDataString .= $column . "='" . validate($value) . "',";
     }
 
-    $finalUpdatedData = substr(trim($updateDataString),0,-1);
+    $finalUpdatedData = rtrim($updateDataString, ',');
 
-    $query = "UPDATE $table SET $finalUpdatedData WHERE id='$id'";
+    $query = "UPDATE $tableName SET $finalUpdatedData WHERE id='$id'";
     $result = mysqli_query($conn, $query);
     return $result;
 }
 
-//pagkuha tanan na record
-    function getAll($tableName, $status = NULL){
-        
-        global $conn;
+function getAll($tableName, $status = null) {
+    global $conn;
 
-        $table = validate($tableName);
-        $status = validate($status);
-
-        if($status == 'status'){
-            $query = "SELECT * FROM $table WHERE status='0'";
-        }else{
-            $query = "SELECT * FROM $table";
-        }
-        return mysqli_query($conn, $query);
+    if ($status == 'active') {
+        $query = "SELECT * FROM $tableName WHERE status='0'";
+    } else {
+        $query = "SELECT * FROM $tableName";
     }
+    return mysqli_query($conn, $query);
+}
 
-    function getById($tableName, $id){
+function getById($tableName, $id) {
+    global $conn;
 
-        global $conn;
+    $query = "SELECT * FROM $tableName WHERE id='$id' LIMIT 1";
+    $result = mysqli_query($conn, $query);
 
-        $table = validate($tableName);
-        $id = validate($id);
-
-        $query = "SELECT * FROM $table WHERE ID='$id' LIMIT 1";
-        $result = mysqli_query($conn, $query);
-
-        if($result){
-
-            if(mysqli_num_rows($result) == 1){
-
-                //$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-                $row = mysqli_fetch_assoc($result);
-                $response = [
-                    'status' => 404,
-                    'data' => $row,
-                    'message' => 'Record Found'
-                ];
-
-            }else{
-                $response = [
-                    'status' => 404,
-                    'message' => 'No Data Found'
-                ];
-            }
-
-        }else{
-            $response = [
-                'status' => 500,
-                'message' => 'Something Went Wrong'
+    if ($result) {
+        if (mysqli_num_rows($result) == 1) {
+            $row = mysqli_fetch_assoc($result);
+            return [
+                'status' => 404,
+                'data' => $row,
+                'message' => 'Record Found',
             ];
-            return $response;
+        } else {
+            return ['status' => 404, 'message' => 'No Data Found'];
         }
     }
+    return ['status' => 500, 'message' => 'Something Went Wrong'];
+}
 
-    function delete($tableName, $id){
+function delete($tableName, $id) {
+    global $conn;
 
-        global $conn;
-
-        $table = validate($tableName);
-        $id = validate($id);
-
-        $query = "DELETE FROM $table WHERE id='$id' LIMIT 1";
-        $result = mysqli_query($conn, $query);
-        return $result;
-    }
+    $query = "DELETE FROM $tableName WHERE id='$id' LIMIT 1";
+    $result = mysqli_query($conn, $query);
+    return $result;
+}
 ?>
