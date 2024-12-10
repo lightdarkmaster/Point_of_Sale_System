@@ -28,6 +28,7 @@
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="">Is Ban</label>
+</br>
                     <input type="checkbox" name="is_ban" style="width:30px;height:30px;" />
                 </div>
                 <div class="col-md-12 mb-3 text-end">
