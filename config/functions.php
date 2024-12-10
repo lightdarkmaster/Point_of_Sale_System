@@ -79,7 +79,7 @@ function getById($tableName, $id) {
         if (mysqli_num_rows($result) == 1) {
             $row = mysqli_fetch_assoc($result);
             return [
-                'status' => 404,
+                'status' => 200,
                 'data' => $row,
                 'message' => 'Record Found',
             ];
@@ -96,5 +96,20 @@ function delete($tableName, $id) {
     $query = "DELETE FROM $tableName WHERE id='$id' LIMIT 1";
     $result = mysqli_query($conn, $query);
     return $result;
+}
+
+
+function checkParamId($type){
+    if(isset($_GET[$type])){
+        if($_GET[$type] != ''){
+            return $_GET[$type];
+        }else{
+        return '<h5>No ID is Found</h5>';
+
+        }
+
+    }else{
+        return '<h5>No ID is Given</h5>';
+    }
 }
 ?>
