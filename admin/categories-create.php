@@ -15,7 +15,7 @@
                         <label for="">Name *</label>
                         <input type="text" name="name" required class="form-control" />
                     </div>
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-12 mb-3">
                         <label for="">Description *</label>
                         <textarea name="description" class="form-control" id="" cols="3" rows="5"></textarea>
                     </div>
