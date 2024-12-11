@@ -28,7 +28,8 @@
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
-                            <th>Description</th>
+                            <th>Email</th>
+                            <th>Phone</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -49,9 +50,9 @@
     
                                 if($item['status'] == 1){
     
-                                    echo '<span class="badge bg-danger">Hidden</span>';
+                                    echo '<span class="badge bg-danger">Inactive</span>';
                                 }else{
-                                    echo '<span class="badge bg-primary">Visible</span>';
+                                    echo '<span class="badge bg-primary">Active</span>';
                                 }
     
                                 ?>

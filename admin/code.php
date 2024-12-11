@@ -8,7 +8,7 @@ if (isset($_POST['saveAdmin'])) {
     $email = validate($_POST['email']);
     $password = validate($_POST['password']);
     $phone = validate($_POST['phone']);
-    $is_ban = validate($_POST['is_ban']) == true ? 1 : 0;
+    $is_ban = isset($_POST['is_ban']) == true ? 1 : 0;
 
     $EMAILCheckQuery = "SELECT * FROM admins WHERE email='$email' AND id!='$adminId'";
     $checkResult = mysqli_query($conn, $EMAILCheckQuery);
@@ -63,7 +63,7 @@ if (isset($_POST['updateAdmin'])) {
     $email = validate($_POST['email']);
     $password = validate($_POST['password']);
     $phone = validate($_POST['phone']);
-    $is_ban = validate($_POST['is_ban']) == true ? 1 : 0;
+    $is_ban = isset($_POST['is_ban']) == true ? 1 : 0;
 
     if ($password != '') {
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
