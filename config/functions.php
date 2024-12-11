@@ -112,4 +112,12 @@ function checkParamId($type){
         return '<h5>No ID is Given</h5>';
     }
 }
+
+
+function logoutSession(){
+
+    unset($_SESSION['loggedIn']);
+    unset($_SESSION['loggedInUser']);
+
+}
 ?>
