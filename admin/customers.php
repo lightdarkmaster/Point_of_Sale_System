@@ -5,21 +5,21 @@
     
     <div class="card mt-4 shadow">
         <div class="card-header">
-            <h4 class="mb-0">Categories
-                <a href="categories-create.php" class="btn btn-primary float-end">Add Categories</a>
+            <h4 class="mb-0">Customers
+                <a href="customers-create.php" class="btn btn-primary float-end">Add Customer</a>
             </h4>
         </div>
         <div class="card-body">
         <?php alertMessage();  ?>
     
         <?php
-            $categories = getAll('categories');
-            if(!$categories){
+            $customers = getAll('customers');
+            if(!$customers){
                 echo '<h4> Something Went Wrong!</h4>';
                 return false;
             }
     
-            if(mysqli_num_rows($categories) > 0){
+            if(mysqli_num_rows($customers) > 0){
     
         ?>
             <div class="table-responsive">
@@ -35,12 +35,13 @@
                     </thead>
                     <tbody>
                         <?php
-                            foreach($categories as $item)  :
+                            foreach($customers as $item)  :
                         ?>
                         <tr>
                             <td><?= $item['id']   ?></td>
                             <td><?= $item['name']   ?></td>
-                            <td><?= $item['description']   ?></td>
+                            <td><?= $item['email']   ?></td>
+                            <td><?= $item['phone']   ?></td>
     
     
                             <td>
@@ -57,8 +58,8 @@
                             </td>
     
                             <td>
-                                <a href="categories-edit.php?id=<?= $item['id']; ?>"class="btn btn-success btn-sm">Edit</a>
-                                <a href="categories-delete.php?id=<?= $item['id']; ?>"class="btn btn-danger btn-sm">Delete</a>
+                                <a href="customers-edit.php?id=<?= $item['id']; ?>"class="btn btn-success btn-sm">Edit</a>
+                                <a href="customers-delete.php?id=<?= $item['id']; ?>"class="btn btn-danger btn-sm">Delete</a>
                             </td>
                         </tr>
                         <?php endforeach; ?>

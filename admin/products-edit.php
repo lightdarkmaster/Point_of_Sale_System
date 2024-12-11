@@ -62,7 +62,7 @@
                             </div>
                             <div class="col-md-12 mb-3">
                                 <label for="">Product Name</label>
-                                <input type="text" name="name" value="<?= $product['data']['name']; ?> " required class="form-control" />
+                                <input type="text" name="name" value="<?= $product['data']['name']; ?>" required class="form-control" />
                             </div>
                             <div class="col-md-12 mb-3">
                                 <label for="">Product Description *</label>
@@ -70,7 +70,7 @@
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="">Product Price</label>
-                                <input type="text" name="price" value="<?= $product['data']['price']; ?> " required class="form-control" />
+                                <input type="text" name="price" value="<?= $product['data']['price']; ?>" required class="form-control" />
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="">Product Quantity</label>
@@ -95,7 +95,7 @@
 
 
                     } else {
-                        echo '<h5>' . $product['message'] . '</h5>';
+                        echo '<h5>'.$product['message'].'</h5>';
                         return false;
                     }
                 } else {
