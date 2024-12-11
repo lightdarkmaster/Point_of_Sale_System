@@ -9,7 +9,9 @@
                 </h4>
             </div>
             <div class="card-body">
+
                 <?php alertMessage(); ?>
+                
                 <form action="code.php" method="POST">
                     <div class="col-md-12 mb-3">
                         <label for="">Name *</label>
