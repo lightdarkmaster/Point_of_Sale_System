@@ -42,7 +42,7 @@
                                 foreach ($products as $item) :
                                 ?>
                                     <tr>
-                                        <td><?= $item['status']   ?></td>
+                                        <td><?= $item['id']   ?></td>
                                         <td>
                                             <img src="../<?= $item['image'];   ?>" style="width:50px;height:50px;" alt="Image">
                                         </td>
@@ -65,7 +65,13 @@
     
                                         <td>
                                             <a href="products-edit.php?id=<?= $item['id']; ?>" class="btn btn-success btn-sm">Edit</a>
-                                            <a href="products-delete.php?id=<?= $item['id']; ?>" class="btn btn-danger btn-sm">Delete</a>
+                                            <a 
+                                            href="products-delete.php?id=<?= $item['id']; ?>" 
+                                            class="btn btn-danger btn-sm"
+                                            onclick="return confirm('Are you sure you want to delete this Product')"
+                                            >
+                                            Delete
+                                        </a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

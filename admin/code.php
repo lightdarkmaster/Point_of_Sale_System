@@ -200,8 +200,8 @@ if (isset($_POST['updateProduct'])) {
 
 
     $product_id = validate($_POST['product_id']);
-    $productData = getById('products', $product_id);
-    if ($productData) {
+    $productData = getById('products',$product_id);
+    if (!$productData) {
         redirect('products.php', 'No Such Product Found');
     }
 
@@ -252,4 +252,72 @@ if (isset($_POST['updateProduct'])) {
     } else {
         redirect('products-edit.php?id='.$product_id, 'Something Went Wrong!');
     }
+}
+
+
+if(isset($_POST['saveCustomer'])){
+    
+    $name = validate($_POST['name']);
+    $email = validate($_POST['email']);
+    $phone = validate($_POST['phone']);
+    $status = isset($_POST['status']) == true ? 1 : 0;
+
+
+    if ($name != '') {
+
+        $data = [
+            'name' => $name,
+            'email' => $email,
+            'phone' => $phone,
+            'status' => $status
+        ];
+
+
+        $result = insert('customers', $data);
+
+        if ($result) {
+            redirect('customers.php', 'Customer Added Sucessfully');
+        } else {
+            redirect('customers-create.php', 'Something Went Wrong!');
+        }
+    } else {
+        redirect('customers-create.php', 'Please fill required fields. ');
+    }
+
+}
+
+
+
+
+if(isset($_POST['updateCustomer'])){
+
+    $customerId = validate($_POST['customerId']);
+    $name = validate($_POST['name']);
+    $email = validate($_POST['email']);
+    $phone = validate($_POST['phone']);
+    $status = isset($_POST['status']) == true ? 1 : 0;
+
+
+    if ($name != '') {
+
+        $data = [
+            'name' => $name,
+            'email' => $email,
+            'phone' => $phone,
+            'status' => $status
+        ];
+
+
+        $result = update('customers',$customerId, $data);
+
+        if ($result) {
+            redirect('customers.php', 'Customer Updated Sucessfully');
+        } else {
+            redirect('customers-create.php', 'Something Went Wrong!');
+        }
+    } else {
+        redirect('customers-create.php', 'Please fill required fields. ');
+    }
+
+
 }

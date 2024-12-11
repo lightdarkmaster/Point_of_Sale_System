@@ -49,11 +49,28 @@
 
             <div class="sb-sidenav-menu-heading">Manage Users</div>
 
+
+            <a class="nav-link collapsed" href="#" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#collapseCustomers" aria-expanded="false" 
+                aria-controls="collapseCustomers">
+                <div class="sb-nav-link-icon"><i class="fa-solid fa-user"></i></i></div>
+                Customer
+                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="collapseCustomers" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                <nav class="sb-sidenav-menu-nested nav">
+                    <a class="nav-link" href="customers-create.php">Add Customer</a>
+                    <a class="nav-link" href="customers.php">View Customer</a>
+                </nav>
+            </div>
+
+
             <a class="nav-link collapsed" href="#" 
                 data-bs-toggle="collapse" 
                 data-bs-target="#collapseAdmins" aria-expanded="false" 
                 aria-controls="collapseAdmins">
-                <div class="sb-nav-link-icon"><i class="fa-regular fa-user"></i></i></div>
+                <div class="sb-nav-link-icon"><i class="fa-solid fa-user-tie"></i></i></div>
                 Admins/Staff
                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
             </a>
