@@ -1,7 +1,7 @@
 <?php include('includes/header.php'); ?>
 <div class="row col-md-12">
     <div class="container-fluid px-4">
-    
+
         <div class="card mt-4 shadow">
             <div class="card-header">
                 <h4 class="mb-0">Add Admins
@@ -29,7 +29,7 @@
                     </div>
                     <div class="col-md-3 mb-3">
                         <label for="">Is Ban</label>
-    </br>
+                        </br>
                         <input type="checkbox" name="is_ban" style="width:30px;height:30px;" />
                     </div>
                     <div class="col-md-12 mb-3 text-end">
@@ -38,7 +38,7 @@
                 </form>
             </div>
         </div>
-    
+
     </div>
 </div>
 

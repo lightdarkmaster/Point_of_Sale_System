@@ -1,7 +1,7 @@
 <?php include('includes/header.php'); ?>
 
 
-<div class="row">
+
     <div class="container-fluid px-4">
 
         <div class="card mt-4 shadow">
@@ -33,16 +33,16 @@
                     <input type="hidden" name="categoryId" value=" <?=$category['data']['id'];   ?>"/>
 
 
-                        <div class="row">
+                        <div class="row col-md-12">
                             <div class="col-md-12 mb-3">
                                 <label for="">Name *</label>
                                 <input type="text" name="name" value=" <?=$category['data']['name'];   ?>" required class="form-control" />
                             </div>
-                            <div class="col-md-6 mb-3">
+                            <div class="col-md-12 mb-3">
                                 <label for="">Description *</label>
                                 <textarea name="description" class="form-control" id="" cols="3" rows="5"><?=$category['data']['description'];   ?></textarea>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <label>Status (UnChecked-Visible, Checked=Hidden)</label>
                                 <br />
                                 <input type="checkbox" name="status" <?= $category['data']['status'] == true ? 'checked':'';   ?> style="width:30px;height:30px;" ;/>
@@ -65,7 +65,6 @@
         </div>
 
     </div>
-</div>
 
 
 
