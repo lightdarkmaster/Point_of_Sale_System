@@ -1,4 +1,14 @@
-<?php include('includes/header.php'); ?>
+<?php include('includes/header.php'); 
+
+if(isset($_SESSION['loggedIn'])){
+
+    ?>
+    <script>window.location.href='index.php'; </script>
+    <?php
+    
+}
+
+?>
 
 <div class="py-5 bg-light">
     <div class="container mt-5">
@@ -14,7 +24,7 @@
                     <form action="login-code.php" method="POST">
                         
                     <div class="mb-3">
-                        <label>Enter Email</label>
+                        <label>Email</label>
                         <input type="email" name="email" class="form-control" required/>
                     </div>
                     <div class="mb-3">

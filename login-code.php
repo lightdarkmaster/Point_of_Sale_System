@@ -18,7 +18,7 @@ if (isset($_POST['loginBtn'])) {
             $hashedPassword = $row['password'];
 
             if (!password_verify($password, $hashedPassword)) {
-                redirect('login.php', 'Invalid Password');
+                redirect('login.php', 'Incorrect Password');
             }
 
             if ($row['is_ban'] == 1) {
@@ -36,7 +36,7 @@ if (isset($_POST['loginBtn'])) {
 
             redirect('admin/index.php', 'Logged in successfully');
         } else {
-            redirect('login.php', 'Invalid Email Address');
+            redirect('login.php', 'Incorrect Email Address');
         }
     } else {
         redirect('login.php', 'All fields are mandatory.');
