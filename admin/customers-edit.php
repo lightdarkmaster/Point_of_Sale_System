@@ -42,7 +42,7 @@
                             </div>
                             <div class="col-md-12 mb-3">
                                 <label for="">Phone *</label>
-                                <input type="number" name="phone" value=" <?=$customer['data']['phone'];   ?>" class="form-control" />
+                                <input type="number" name="phone" value="<?=$customer['data']['phone'];?>" class="form-control" />
                             </div>
                             <div class="col-md-12">
                                 <label>Status (UnChecked-Visible, Checked=Hidden)</label>
