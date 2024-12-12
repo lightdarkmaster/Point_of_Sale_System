@@ -1,4 +1,42 @@
 <?php include('includes/header.php'); ?>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="addCustomerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Customer</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <div class="mb-3">
+        <label>Customer Name</label>
+        <input type="text" class="form-control" id="c_name"/>
+       </div>
+       <div class="mb-3">
+        <label>Phone</label>
+        <input type="number" class="form-control" id="c_phone"/>
+       </div>
+       <div class="mb-3">
+        <label>Email (optional) </label>
+        <input type="email" class="form-control" id="c_email"/>
+       </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary saveCustomer">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
 <div class="row">
     <div class="container-fluid px-4">
 
@@ -125,8 +163,8 @@
                     <div class="col-md-4">
                         <label>Select Payment Mode</label>
                         <select id="payment_mode" class="form-select">
-                            <option value="Cash Payment">Select Payment</option>
-                            <option value="Cash Payment">Online Payment</option>
+                            <option value="">Select Payment</option>
+                            <option value="Online Payment">Online Payment</option>
                             <option value="Cash Payment">Cash Payment</option>
                         </select>
                     </div>
@@ -136,7 +174,7 @@
                     </div>
                     <div class="col-md-4">
                         <br/>
-                        <button type="button" class="btn btn-warning w-50 proceedToPlace">Place Order</button>
+                        <button type="button" name="proceedToPlaceBtn" class="btn btn-warning w-50 proceedToPlace">Place Order</button>
                     </div>
                 </div>
             </div>
