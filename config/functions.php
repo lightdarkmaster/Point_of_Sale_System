@@ -120,4 +120,17 @@ function logoutSession(){
     unset($_SESSION['loggedInUser']);
 
 }
+
+function jsonResponse($status, $status_type, $message){
+
+    $response = [
+        'status' => $status,
+        'status_type' => $status_type,
+        'message' => $message
+    ];
+    echo json_encode($response);
+    return;
+}
+
+
 ?>
