@@ -113,7 +113,7 @@ if (isset($_POST['saveCategory'])) {
         $result = insert('categories', $data);
 
         if ($result) {
-            redirect('categories.php', 'Product Added Sucessfully');
+            redirect('categories.php', 'Category Added Sucessfully');
         } else {
             redirect('categories-create.php', 'Something Went Wrong!');
         }
@@ -144,7 +144,7 @@ if (isset($_POST['updateCategory'])) {
         $result = update('categories', $categoryId, $data);
 
         if ($result) {
-            redirect('categories.php?id=' . $categoryId, 'Product Updated Sucessfully');
+            redirect('categories.php?id=' . $categoryId, 'Category Updated Sucessfully');
         } else {
             redirect('categories-edit.php?id=' . $categoryId, 'Something Went Wrong!');
         }

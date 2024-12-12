@@ -101,7 +101,8 @@
                             <tr>
                                 <td><?= $i++ ?></td>
                                 <td><?= $items['name']; ?></td>
-                                <td><?= $items['price']; ?></td>
+                                <td>Php. <?= number_format($items['price']); ?></td>
+
                                 <td>
                                     <div class="input-group">
                                         <button class="input-group-text">-</button>
@@ -109,7 +110,7 @@
                                         <button class="input-group-text">+</button>
                                     </div>
                                 </td>
-                                <td><?= number_format($items['price'] * $items['quantity'], 0); ?></td>
+                                <td>Php. <?= number_format($items['price'] * $items['quantity'], 0); ?></td>
                                 <td>
                                     <a href="order-item-delete.php?index=<?= $key; ?>" class="btn btn-danger">Remove</a>
                                 </td>
@@ -118,6 +119,26 @@
                         <?php endforeach; ?>
                     </tbody>
                 </table>
+            </div>
+            <div class="mt-2">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>Select Payment Mode</label>
+                        <select id="payment_mode" class="form-select">
+                            <option value="Cash Payment">Select Payment</option>
+                            <option value="Cash Payment">Online Payment</option>
+                            <option value="Cash Payment">Cash Payment</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Enter Customer Phone Number</label>
+                        <input type="number" id="cphone" class="form-control" value=""/>
+                    </div>
+                    <div class="col-md-4">
+                        <br/>
+                        <button type="button" class="btn btn-warning w-50 proceedToPlace">Place Order</button>
+                    </div>
+                </div>
             </div>
         <?php
 
