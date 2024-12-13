@@ -21,8 +21,8 @@ if (!isset($_SESSION['productItems'])) {
         </div>
 
         <a href="orders.php" class="btn btn-secondary">Close</a>
-        <button type="button" class="btn btn-danger">Print</button>
-        <button type="button" class="btn btn-primary">Download</button>
+        <button type="button" class="btn btn-danger" onclick="printMyBillingArea()">Print</button>
+        <button type="button" class="btn btn-primary" onclick="downloadPDF('<?= $_SESSION['invoice_no'];?>')">Download</button>
 
 
       </div>
