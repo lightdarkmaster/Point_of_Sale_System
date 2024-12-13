@@ -1,58 +1,96 @@
-Simple - POS System in PHP MySQL
+# Simple POS System in PHP and MySQL
 
-#Requirements
-1. Host : Localhost
-2. PHP Version : 5.6 and above
-3. Database : MySQL DB
-4. Web Browser : Chrome, FireFox, Internet Explorer, MS Edge
+A lightweight and user-friendly Point of Sale (POS) system built with PHP and MySQL for managing categories, products, customers, orders, and admin accounts.
 
-it database ada ha folder database - 
+---
 
+## 📋 Requirements
+- **Host:** Localhost
+- **PHP Version:** 5.6 and above
+- **Database:** MySQL DB  
+  _(Database file is located in the `database` folder)_
+- **Web Browser:** Chrome, Firefox, Internet Explorer, MS Edge
 
-#Login System using Session.
-1. Add / Edit & Update / Delete Categories.
-2. Add / Edit & Update / Delete Products.
-3. Add / Edit & Update / Delete Customers.
+---
 
-#Customer data are used while creating orders that for whom this order is created.
-Add / Edit & Update / Delete Admins, so multiple admins can manage this pos system. 
+## 🔐 Login System
+- Secure login system using PHP Sessions.
+- Manage multiple admins:
+  - Add, Edit, Update, and Delete Admin accounts.
 
-#Create Order
-a. To create an order, you need to select the product from the dropdown. You can search for the product from the dropdown. (Select2)
-b. After selecting a product, add the number of quantity for that product and add the item to your session cart.
-c. Once the product is added, it will be listed in html table format.
-d. You can increase & decrease the quantity from that list of products.
-e. You can delete/remove each product from that list of products. 
+---
 
-7.1 To place the order 
-  a. Select the payment mode
-  b. Enter the customer's phone number and "proceed to place order", we have a condition, if the customer's phone number is not available in your customer record, then you will be allowed to "create the customer" on a POP UP Box / Modal and save customer data and then finally "Proceed to place order" and goes to order-summary (order review).
+## 🗂 Features
 
-#Order Summary
-In this order summary,
-a. You can review your Customer details.
-b. You can review your Invoice Details like invoice number, Invoice date
-c. Review your products.
-d. If you want to modify the product items, you can go back and modify product items and then come back to order summary.
-e. You can SAVE the order.
-f. You can Print this order.
-g. You can Download this order in PDF
+### 🏷️ Categories Management
+- Add, Edit, Update, and Delete product categories.
 
-#Orders
-In this order - you will see a list of orders like tracking no, order date, payment mode, and customer details.
-a. List of all the Orders created by admin.
-b. Filter the orders by "Order DATE" & "Payment Mode"
-c. View each order and you will find all the customer's details, order details, and product items.
-d. You can Print and download a PDF of the BILL of each order.
+### 📦 Product Management
+- Add, Edit, Update, and Delete products.
 
- Dashboard Analytics 
-Dashboard Analytics: View count of today's orders, total categories, total products, total customers, etc.
+### 👤 Customer Management
+- Add, Edit, Update, and Delete customers.
+- Customer data is used while creating orders.
 
-<button onclick="handleClick()">Password</button>
+### 🛒 Create Order
+1. Select a product from the dropdown menu with search functionality (powered by **Select2**).
+2. Specify the product quantity and add it to the session cart.
+3. View added products in an HTML table format:
+   - Increase or decrease product quantities.
+   - Remove products from the list.
+4. **Place an Order:**
+   - Select a payment mode.
+   - Enter the customer's phone number.
+     - If the customer's phone number is not found in the records, you can create the customer in a **POP-UP/Modal** and proceed.
+   - Review the order summary before confirming.
 
+---
 
-  <script>
-    function handleClick() {
-      alert("barbosa");
-    }
-  </script>
+## 📋 Order Summary
+In the Order Summary:
+- Review customer details.
+- Check invoice details:
+  - Invoice Number
+  - Invoice Date
+- Verify product items.
+- Modify product items, if needed, and return to the summary.
+- Actions:
+  - Save the order.
+  - Print the order.
+  - Download the order as a **PDF**.
+
+---
+
+## 📑 Orders
+Manage all created orders with detailed information:
+- View a list of orders including:
+  - Tracking Number
+  - Order Date
+  - Payment Mode
+  - Customer Details
+- Filter orders by **Order Date** or **Payment Mode**.
+- View individual orders:
+  - Customer details
+  - Order details
+  - Product items
+  - Print or download the bill as a **PDF**.
+
+---
+
+## 📊 Dashboard Analytics
+Monitor key metrics at a glance:
+- **Today's Orders Count**
+- **Total Categories**
+- **Total Products**
+- **Total Customers**
+
+---
+
+### 💾 Database
+- The database file is located in the `database` folder for easy setup.
+
+---
+
+Enjoy managing your inventory and sales efficiently with this Simple POS System! 🎉
+
+-- Christian Barbosa --- December 14, 2024 --12:30 --
