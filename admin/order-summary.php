@@ -9,6 +9,30 @@ if (!isset($_SESSION['productItems'])) {
 ?>
 
 
+
+<!-- Modal -->
+<div class="modal fade" id="orderSuccessModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+
+        <div class="mb-3 p-4">
+            <h5 id="orderPlaceSuccessMessage"></h5>
+        </div>
+
+        <a href="orders.php" class="btn btn-secondary">Close</a>
+        <button type="button" class="btn btn-danger">Print</button>
+        <button type="button" class="btn btn-primary">Download</button>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 <div class="container-fluid px-4">
     <div class="row">
         <div class="col-md-12">
@@ -138,7 +162,7 @@ if (!isset($_SESSION['productItems'])) {
 
                     <?php if(isset($_SESSION['productItems'])):?>
                     <div class="mt-4 text-end">
-                        <button type="button" id="saveOrder" class="btn btn-primary px-4 mx-1">Save</button>
+                        <button type="button" class="btn btn-primary px-4 mx-1" id="saveOrder">Save</button>
                     </div>
 
                     <?php endif;  ?>

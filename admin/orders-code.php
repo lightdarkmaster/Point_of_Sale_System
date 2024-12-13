@@ -2,6 +2,8 @@
 
 include('../config/functions.php');
 
+
+
 if(!isset($_SESSION['productItems'])){
     $_SESSION['productItems'] = [];
 }
@@ -205,6 +207,8 @@ if(isset($_POST['saveOrder'])){
         jsonResponse(404, 'warning', 'No Customer Found');
     }
 }
+
+
 
 
 ?>
