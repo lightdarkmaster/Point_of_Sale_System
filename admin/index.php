@@ -1,46 +1,68 @@
-<?php include('includes/header.php');  ?>
+<?php include('includes/header.php'); ?>
 
+<div class="container my-5">
+    <div class="row text-center mb-5">
+        <div class="col-md-12">
+            <h1 class="display-4 fw-bold">Dashboard</h1>
+            <?php alertMessage(); ?>
+        </div>
+    </div>
 
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Dashboard</li>
-                        </ol>
-                        <div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Primary Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Warning Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Success Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Danger Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
+    <!-- First Row -->
+    <div class="row text-center g-4">
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <p class="text-muted text-uppercase fw-bold">Total Categories</p>
+                    <h5 class="fw-bold text-primary"><?= getCount('categories') ?></h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <p class="text-muted text-uppercase fw-bold">Total Products</p>
+                    <h5 class="fw-bold text-primary"><?= getCount('products') ?></h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <p class="text-muted text-uppercase fw-bold">Total Orders</p>
+                    <h5 class="fw-bold text-primary"><?= getCount('orders') ?></h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <p class="text-muted text-uppercase fw-bold">Customers</p>
+                    <h5 class="fw-bold text-primary"><?= getCount('customers') ?></h5>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Second Row -->
+    <div class="row text-center g-4 mt-4">
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <p class="text-muted text-uppercase fw-bold">Total Orders</p>
+                    <h5 class="fw-bold text-primary"><?= getCount('orders') ?></h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <p class="text-muted text-uppercase fw-bold">Admins</p>
+                    <h5 class="fw-bold text-primary"><?= getCount('admins') ?></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-
-<?php include('includes/footer.php');  ?>
+<?php include('includes/footer.php'); ?>

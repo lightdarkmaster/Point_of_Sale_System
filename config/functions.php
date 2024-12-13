@@ -132,5 +132,22 @@ function jsonResponse($status, $status_type, $message){
     return;
 }
 
+function getCount($tableName){
+    global $conn;
+
+    $table = validate($tableName);
+
+    $query = "SELECT * FROM $tableName";
+
+    $query_run = mysqli_query($conn, $query);
+
+    if($query_run){
+        $totalCount = mysqli_num_rows($query_run);
+        return $totalCount;
+    }else{
+        return 'Something Went Wrong';
+    }
+}
+
 
 ?>
