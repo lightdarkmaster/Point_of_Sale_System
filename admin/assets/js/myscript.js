@@ -102,4 +102,28 @@ $(document).on('click', '.proceedToPlace', function() {
 
     });
 
+
+    //save receipt
+    $(document).on('click','#saveOrder', function(){
+
+       $.ajax({
+        type: "POST",
+        url: "orders-code.php",
+        data: {
+            'saveOrder': true
+        },
+        success: function(response){
+            var res = JSON.parse(response);
+
+            if(res.status == 200){
+                swal(res.message, res.message, res.status_type);
+            }else{
+                swal(res.message, res.message, res.status_type);
+            }
+        }
+       });
+
+
+    });
+
 });
