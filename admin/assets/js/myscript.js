@@ -155,3 +155,56 @@ function downloadPDF(invoiceNo){
       windowWidth: 650
   });
 }
+//added for my chart
+    // Wait for the DOM to load
+    document.addEventListener("DOMContentLoaded", function () {
+      // Get the context of the canvas
+      const ctx = document.getElementById('myAreaChart').getContext('2d');
+
+      // Define the data
+      const data = {
+          labels: ["January", "February", "March", "April", "May", "June"],
+          datasets: [{
+              label: "Monthly Sales",
+              data: [500, 1000, 750, 1250, 1750, 1500], // Replace with your data
+              fill: true,
+              backgroundColor: "rgba(75, 192, 192, 0.2)", // Area color
+              borderColor: "rgba(75, 192, 192, 1)", // Line color
+              pointBackgroundColor: "rgba(75, 192, 192, 1)",
+              pointBorderColor: "#fff"
+          }]
+      };
+
+      // Configure the chart
+      const config = {
+          type: 'line', // 'line' is commonly used for area charts
+          data: data,
+          options: {
+              responsive: true,
+              plugins: {
+                  legend: {
+                      display: true,
+                      position: 'top'
+                  }
+              },
+              scales: {
+                  x: {
+                      title: {
+                          display: true,
+                          text: "Months"
+                      }
+                  },
+                  y: {
+                      title: {
+                          display: true,
+                          text: "Sales ($)"
+                      },
+                      beginAtZero: true
+                  }
+              }
+          }
+      };
+
+      // Create and render the chart
+      new Chart(ctx, config);
+  });
