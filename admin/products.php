@@ -57,7 +57,7 @@
 
                                             if ($item['status'] == 1) {
 
-                                                echo '<span class="badge bg-danger">Not Available</span>';
+                                                echo '<span class="badge bg-danger">Hidden</span>';
                                             } else {
                                                 echo '<span class="badge bg-primary">Available</span>';
                                             }
