@@ -132,10 +132,10 @@ if (!isset($_SESSION['productItems'])) {
                                             <tr>
                                                 <td style="border-bottom: 1px solid #ccc;"> <?= $i++; ?></td>
                                                 <td style="border-bottom: 1px solid #ccc;"><?= $row['name']; ?></td>
-                                                <td style="border-bottom: 1px solid #ccc;">Php. <?= number_format($row['price'], 01); ?>0</td>
+                                                <td style="border-bottom: 1px solid #ccc;">Php. <?= number_format($row['price'], 2); ?></td>
                                                 <td style="border-bottom: 1px solid #ccc;"><?= $row['quantity']; ?></td>
-                                                <td style="border-bottom: 1px solid #ccc;">Php.
-                                                    <?= number_format($row['price'] * $row['quantity'], 01); ?>0
+                                                <td style="border-bottom: 1px solid #ccc;">Php. 
+                                                    <?= number_format($row['price'] * $row['quantity'], 2); ?>
                                                 </td>
                                             </tr>
                                         <?php endforeach;  ?>

@@ -88,10 +88,10 @@
                                             <tr>
                                                 <td style="border-bottom: 1px solid #ccc;"> <?= $i++; ?></td>
                                                 <td style="border-bottom: 1px solid #ccc;"><?= $row['name']; ?></td>
-                                                <td style="border-bottom: 1px solid #ccc;">Php. <?= number_format($row['orderItemPrice'], 01); ?>0</td>
+                                                <td style="border-bottom: 1px solid #ccc;">Php. <?= number_format($row['orderItemPrice'], 2); ?></td>
                                                 <td style="border-bottom: 1px solid #ccc;"><?= $row['orderItemQuantity']; ?></td>
                                                 <td style="border-bottom: 1px solid #ccc;">Php.
-                                                    <?= number_format($row['orderItemPrice'] * $row['orderItemQuantity'], 01); ?>0
+                                                    <?= number_format($row['orderItemPrice'] * $row['orderItemQuantity'], 2); ?>
                                                 </td>
                                             </tr>
                                         <?php endforeach;  ?>
