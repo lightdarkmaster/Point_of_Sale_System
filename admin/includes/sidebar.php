@@ -89,6 +89,10 @@
                     <a class="nav-link" href="admins.php">View Admins</a>
                 </nav>
             </div>
+            <a class="nav-link" href="../logout.php">
+                <div class="sb-nav-link-icon"><i class="fa-solid fa-right-from-bracket"></i></div>
+                Log-Out
+            </a>
 
 
         </div>
@@ -97,8 +101,6 @@
         <div class="small">Logged in as:  
             <i class="fas fa-user fa-fw"></i>
                <?= $_SESSION['loggedInUser']['name']; ?></div>
-        <div class="sb-sidenav-footer">
-        </div>
     </div>
 </nav>
 </div>
