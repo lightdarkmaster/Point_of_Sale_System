@@ -65,9 +65,9 @@ if (!isset($_SESSION['productItems'])) {
                                         <tbody>
                                             <tr>
                                                 <td style="text-align: center;" colspan="2">
-                                                    <h4 style="font-size: 23px; line-height: 30px; margin:2px; padding:0">Mr. Chan Marketing</h4>
+                                                    <h4 style="font-size: 23px; line-height: 30px; margin:2px; padding:0">Infinite Horizon Co. </h4>
                                                     <p style="font-size: 16px; line-height: 24px; margin:2px; padding:0;">Zone 4 Sta. Fe, Leyte Philippines</p>
-                                                    <p style="font-size: 16px; line-height: 24px; margin:2px; padding:0;">Mr. Chan Mktg. ltd.</p>
+                                                    <p style="font-size: 16px; line-height: 24px; margin:2px; padding:0;">ZenithWave Industries .ltd</p>
                                                 </td>
                                             </tr>
                                             <tr>
