@@ -14,7 +14,7 @@
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-primary text-white mb-4">
                     <div class="card-body text-uppercase fw-bold">Total Categories</div>
-                    <h5 class="fw-bold"><?= getCount('categories') ?></h5>
+                    <h2 class="fw-bold"><?= getCount('categories') ?></h2>
                     <div class="card-footer d-flex align-items-center justify-content-between">
                         <a class="small text-white stretched-link" href="categories.php">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -24,7 +24,7 @@
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-warning text-white mb-4">
                     <div class="card-body text-uppercase fw-bold">Total Products</div>
-                    <h5 class="fw-bold"><?= getCount('products') ?></h5>
+                    <h2 class="fw-bold"><?= getCount('products') ?></h2>
                     <div class="card-footer d-flex align-items-center justify-content-between">
                         <a class="small text-white stretched-link" href="products.php">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -34,7 +34,7 @@
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-success text-white mb-4">
                     <div class="card-body text-uppercase fw-bold">Total Orders</div>
-                    <h5 class="fw-bold"><?= getCount('orders') ?></h5>
+                    <h2 class="fw-bold"><?= getCount('orders') ?></h2>
                     <div class="card-footer d-flex align-items-center justify-content-between">
                         <a class="small text-white stretched-link" href="orders.php">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -44,7 +44,7 @@
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-danger text-white mb-4">
                     <div class="card-body text-uppercase fw-bold">Customers</div>
-                    <h5 class="fw-bold"><?= getCount('customers') ?></h5>
+                    <h2 class="fw-bold"><?= getCount('customers') ?></h2>
                     <div class="card-footer d-flex align-items-center justify-content-between">
                         <a class="small text-white stretched-link" href="customers.php">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
