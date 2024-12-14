@@ -33,6 +33,7 @@ if(isset($_SESSION['loggedIn'])){
                     </div>
                     <div class="mb-3">
                         <button type="submit" name="loginBtn" class="btn btn-primary w-100 mt-2"> Sign-in </button>
+                        <a class="btn btn-danger w-100 mt-2" href="index.php">Cancel</a>
                     </div>
                     </form>
                 </div>
