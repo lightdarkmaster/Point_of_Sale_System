@@ -1,8 +1,9 @@
 <?php
 session_start();
-
+//import database connection
 require 'dbcon.php';
 
+//pag validate han data
 function validate($inputData) {
     global $conn;
     if (isset($inputData) && is_string($inputData)) {
@@ -11,13 +12,13 @@ function validate($inputData) {
     }
     return $inputData;
 }
-
+//pag redirect to other page ngan status
 function redirect($url, $status) {
     $_SESSION['status'] = $status;
     header('Location: ' . $url);
     exit(0);
 }
-
+//pag display alertmessages
 function alertMessage() {
     if (isset($_SESSION['status'])) {
         echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -27,7 +28,7 @@ function alertMessage() {
         unset($_SESSION['status']);
     }
 }
-
+//pag insert hin data ha table
 function insert($tableName, $data) {
     global $conn;
 
@@ -41,7 +42,7 @@ function insert($tableName, $data) {
     $result = mysqli_query($conn, $query);
     return $result;
 }
-
+//pag update han data ha table
 function update($tableName, $id, $data) {
     global $conn;
 
@@ -57,7 +58,7 @@ function update($tableName, $id, $data) {
     $result = mysqli_query($conn, $query);
     return $result;
 }
-
+//pag kuha tanan na data ha database table
 function getAll($tableName, $status = null) {
     global $conn;
 
@@ -68,7 +69,7 @@ function getAll($tableName, $status = null) {
     }
     return mysqli_query($conn, $query);
 }
-
+//pag kuha hin specific na data ha table gamit hin id
 function getById($tableName, $id) {
     global $conn;
 
@@ -89,7 +90,7 @@ function getById($tableName, $id) {
     }
     return ['status' => 500, 'message' => 'Something Went Wrong'];
 }
-
+//pag delete hin data ha database
 function delete($tableName, $id) {
     global $conn;
 
@@ -98,7 +99,7 @@ function delete($tableName, $id) {
     return $result;
 }
 
-
+//pag check han parameter ID
 function checkParamId($type){
     if(isset($_GET[$type])){
         if($_GET[$type] != ''){
@@ -113,14 +114,14 @@ function checkParamId($type){
     }
 }
 
-
+//pag logout han user
 function logoutSession(){
 
     unset($_SESSION['loggedIn']);
     unset($_SESSION['loggedInUser']);
 
 }
-
+//pag display hin json response
 function jsonResponse($status, $status_type, $message){
 
     $response = [
@@ -131,7 +132,7 @@ function jsonResponse($status, $status_type, $message){
     echo json_encode($response);
     return;
 }
-
+//pagkuha han values kada table gin gamit ko ha dashboard la, amo la nak gamitan
 function getCount($tableName){
     global $conn;
 
@@ -149,5 +150,5 @@ function getCount($tableName){
     }
 }
 
-
+//done na nga yaing..
 ?>
