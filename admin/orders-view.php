@@ -86,14 +86,14 @@
                         if ($orderItemsRes) {
                             if (mysqli_num_rows($orderItemsRes) > 0) {
                         ?>
-                                <h4 class="mt-3">Order items Details</h4>
+                                <h4 class="mt-3">Order Items Details</h4>
                                 <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>Product</th>
-                                            <th>Price</th>
-                                            <th>Quantity</th>
-                                            <th>Total</th>
+                                            <th class="text-center">Product</th>
+                                            <th class="text-center"> Unit Price</th>
+                                            <th class="text-center">Quantity</th>
+                                            <th class="text-center">Total</th>
                                         </tr>
                                     </thead>
 
@@ -106,20 +106,20 @@
 
                                                     <?= $orderItemsRows['name']; ?>
                                                 </td>
-                                                <td width="15%" class="fw-bold text-left">Php. 
+                                                <td width="15%" class="text-left">Php. 
                                                     <?= number_format($orderItemsRows['orderItemPrice'], 01)   ?>0
                                                 </td>
-                                                <td width="15%" class="fw-bold text-left">
+                                                <td width="15%" class="text-center">
                                                     <?= $orderItemsRows['orderItemQuantity'];  ?>
                                                 </td>
-                                                <td width="15%" class="fw-bold text-left">Php. 
+                                                <td width="15%" class="text-left">Php. 
                                                     <?= number_format($orderItemsRows['orderItemPrice']*$orderItemsRows['orderItemQuantity'], 01)   ?>0
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>
 
                                         <tr>
-                                            <td class=" fw-bold fs-20" style="background:black;color:white;">Total Price :</td>
+                                            <td class=" fw-bold fs-20" style="background:black;color:white;">Total Payable :</td>
                                             <td colspan="3" class="text-end fw-bold"style="background:black;color:white;">Php. <?= number_format($orderItemsRows['total_amount'], 01); ?>0</td>
                                         </tr>
 
