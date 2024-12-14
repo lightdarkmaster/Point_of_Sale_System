@@ -113,7 +113,7 @@
                                                     <?= $orderItemsRows['orderItemQuantity'];  ?>
                                                 </td>
                                                 <td width="15%" class="fw-bold text-left">Php. 
-                                                    <?= number_format($orderItemsRows['orderItemPrice'], 01)   ?>0
+                                                    <?= number_format($orderItemsRows['orderItemPrice']*$orderItemsRows['orderItemQuantity'], 01)   ?>0
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>
