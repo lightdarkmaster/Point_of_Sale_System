@@ -88,16 +88,16 @@
                                             <tr>
                                                 <td style="border-bottom: 1px solid #ccc;"> <?= $i++; ?></td>
                                                 <td style="border-bottom: 1px solid #ccc;"><?= $row['name']; ?></td>
-                                                <td style="border-bottom: 1px solid #ccc;">Php. <?= number_format($row['orderItemPrice'], 0); ?></td>
+                                                <td style="border-bottom: 1px solid #ccc;">Php. <?= number_format($row['orderItemPrice'], 2); ?></td>
                                                 <td style="border-bottom: 1px solid #ccc;"><?= $row['orderItemQuantity']; ?></td>
                                                 <td style="border-bottom: 1px solid #ccc;">Php.
-                                                    <?= number_format($row['orderItemPrice'] * $row['orderItemQuantity'], 0); ?>
+                                                    <?= number_format($row['orderItemPrice'] * $row['orderItemQuantity'], 2); ?>
                                                 </td>
                                             </tr>
                                         <?php endforeach;  ?>
                                         <tr>
                                             <td colspan="4" align="end" style="font-weight: bold;">Grand Total: </td>
-                                            <td colspan="1" style="font-weight: bold; color: red; font-size: 16px;">Php. <?= number_format($row['total_amount'], 0); ?></td>
+                                            <td colspan="1" style="font-weight: bold; color: red; font-size: 16px;">Php. <?= number_format($row['total_amount'], 01); ?>0</td>
                                         </tr>
                                         <tr>
                                             <td colspan="5">Payment Method: <?= $row['payment_mode']; ?></td>

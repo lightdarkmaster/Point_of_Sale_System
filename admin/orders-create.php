@@ -4,32 +4,32 @@
 
 <!-- Modal -->
 <div class="modal fade" id="addCustomerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Customer</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-       <div class="mb-3">
-        <label>Customer Name</label>
-        <input type="text" class="form-control" id="c_name"/>
-       </div>
-       <div class="mb-3">
-        <label>Phone</label>
-        <input type="number" class="form-control" id="c_phone"/>
-       </div>
-       <div class="mb-3">
-        <label>Email (optional) </label>
-        <input type="email" class="form-control" id="c_email"/>
-       </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary saveCustomer">Save</button>
-      </div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Customer</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label>Customer Name</label>
+                    <input type="text" class="form-control" id="c_name" />
+                </div>
+                <div class="mb-3">
+                    <label>Phone</label>
+                    <input type="number" class="form-control" id="c_phone" />
+                </div>
+                <div class="mb-3">
+                    <label>Email (optional) </label>
+                    <input type="email" class="form-control" id="c_email" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary saveCustomer">Save</button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 
@@ -121,41 +121,46 @@
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Product Name</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Total Price</th>
-                            <th>Remove</th>
+                            <th class="text-center">ID</th>
+                            <th class="text-center">Product Name</th>
+                            <th class="text-center">Price</th>
+                            <th class="text-center">Quantity</th>
+                            <th class="text-center">Total Price</th>
+                            <th class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-
                         <?php
                         $i = 1;
-                        foreach ($sessionProducts as $key => $items) :
+                        $grandTotal = 0; // Initialize the grand total
 
+                        foreach ($sessionProducts as $key => $items) :
+                            $totalPrice = $items['price'] * $items['quantity'];
+                            $grandTotal += $totalPrice; // Add the product total to the grand total
                         ?>
                             <tr>
-                                <td><?= $i++ ?></td>
-                                <td><?= $items['name']; ?></td>
-                                <td>Php. <?= number_format($items['price']); ?></td>
-
+                                <td class="text-center"><?= $i++ ?></td>
+                                <td class="text-center"><?= $items['name']; ?></td>
+                                <td class="text-center">Php. <?= number_format($items['price'], 2); ?></td>
                                 <td>
                                     <div class="input-group">
                                         <button class="input-group-text">-</button>
-                                        <input type="text" value="<?= $items['quantity'];  ?>" class="qty quantityInput" />
+                                        <input type="text" value="<?= $items['quantity']; ?>" class="qty quantityInput" />
                                         <button class="input-group-text">+</button>
                                     </div>
                                 </td>
-                                <td>Php. <?= number_format($items['price'] * $items['quantity'], 0); ?></td>
-                                <td>
+                                <td class="text-center">Php. <?= number_format($totalPrice, 2); ?></td>
+                                <td class="text-center">
                                     <a href="order-item-delete.php?index=<?= $key; ?>" class="btn btn-danger">Remove</a>
                                 </td>
-
                             </tr>
                         <?php endforeach; ?>
+                        <tr>
+                            <td colspan="4" class="text-start fw-bold bg-secondary" style="color:white;">Grand Total:</td>
+                            <td colspan="2"class="text-end fw-bold bg-secondary" style="color:white">Php. <?= number_format($grandTotal, 2); ?></td>
+                        </tr>
                     </tbody>
+
                 </table>
             </div>
             <div class="mt-2">
@@ -170,10 +175,10 @@
                     </div>
                     <div class="col-md-4">
                         <label>Enter Customer Phone Number</label>
-                        <input type="number" id="cphone" class="form-control" value=""/>
+                        <input type="number" id="cphone" class="form-control" value="" />
                     </div>
                     <div class="col-md-4">
-                        <br/>
+                        <br />
                         <button type="button" name="proceedToPlaceBtn" class="btn btn-warning w-50 proceedToPlace">Place Order</button>
                     </div>
                 </div>
