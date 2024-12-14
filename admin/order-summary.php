@@ -132,17 +132,17 @@ if (!isset($_SESSION['productItems'])) {
                                             <tr>
                                                 <td style="border-bottom: 1px solid #ccc;"> <?= $i++; ?></td>
                                                 <td style="border-bottom: 1px solid #ccc;"><?= $row['name']; ?></td>
-                                                <td style="border-bottom: 1px solid #ccc;">Php. <?= number_format($row['price'], 0); ?></td>
+                                                <td style="border-bottom: 1px solid #ccc;">Php. <?= number_format($row['price'], 01); ?>0</td>
                                                 <td style="border-bottom: 1px solid #ccc;"><?= $row['quantity']; ?></td>
                                                 <td style="border-bottom: 1px solid #ccc;">Php.
-                                                    <?= number_format($row['price'] * $row['quantity'], 0); ?>
+                                                    <?= number_format($row['price'] * $row['quantity'], 01); ?>0
                                                 </td>
                                             </tr>
                                         <?php endforeach;  ?>
 
                                         <tr>
                                             <td colspan="4" align="end" style="font-weight: bold;">Grand Total: </td>
-                                            <td colspan="1" style="font-weight: bold; color: red; font-size: 16px;">Php. <?= number_format($totalAmount, 0); ?></td>
+                                            <td colspan="1" style="font-weight: bold; color: red; font-size: 16px;">Php. <?= number_format($totalAmount, 01); ?>0</td>
                                         </tr>
                                         <tr>
                                             <td colspan="5">Payment Method: <?= $_SESSION['payment_mode']; ?></td>

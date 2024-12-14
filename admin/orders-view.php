@@ -106,21 +106,21 @@
 
                                                     <?= $orderItemsRows['name']; ?>
                                                 </td>
-                                                <td width="15%" class="fw-bold text-center">
-                                                    <?= number_format($orderItemsRows['orderItemPrice'], 0)   ?>
+                                                <td width="15%" class="fw-bold text-left">Php. 
+                                                    <?= number_format($orderItemsRows['orderItemPrice'], 01)   ?>0
                                                 </td>
-                                                <td width="15%" class="fw-bold text-center">
+                                                <td width="15%" class="fw-bold text-left">
                                                     <?= $orderItemsRows['orderItemQuantity'];  ?>
                                                 </td>
-                                                <td width="15%" class="fw-bold text-center">
-                                                    <?= number_format($orderItemsRows['orderItemPrice'], 0)   ?>
+                                                <td width="15%" class="fw-bold text-left">Php. 
+                                                    <?= number_format($orderItemsRows['orderItemPrice'], 01)   ?>0
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>
 
                                         <tr>
-                                            <td class="text-end fw-bold">Total Price :</td>
-                                            <td colspan="3" class="text-end fw-bold">Php. <?= number_format($orderItemsRows['total_amount'], 0); ?></td>
+                                            <td class=" fw-bold fs-20" style="background:black;color:white;">Total Price :</td>
+                                            <td colspan="3" class="text-end fw-bold"style="background:black;color:white;">Php. <?= number_format($orderItemsRows['total_amount'], 01); ?>0</td>
                                         </tr>
 
                                     </tbody>
