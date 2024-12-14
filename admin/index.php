@@ -8,63 +8,73 @@
                 <?php alertMessage(); ?>
             </div>
         </div>
-    
+
         <!-- First Row -->
         <div class="row text-center g-4">
-            <div class="col-md-3">
-                <div class="card shadow-sm border-1">
-                    <div class="card-body">
-                        <p class="text-muted text-uppercase fw-bold">Total Categories</p>
-                        <h5 class="fw-bold text-primary"><?= getCount('categories') ?></h5>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-primary text-white mb-4">
+                    <div class="card-body text-uppercase fw-bold">Total Categories</div>
+                    <h5 class="fw-bold"><?= getCount('categories') ?></h5>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="categories.php">View Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card shadow-sm border-1">
-                    <div class="card-body">
-                        <p class="text-muted text-uppercase fw-bold">Total Products</p>
-                        <h5 class="fw-bold text-primary"><?= getCount('products') ?></h5>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-warning text-white mb-4">
+                    <div class="card-body text-uppercase fw-bold">Total Products</div>
+                    <h5 class="fw-bold"><?= getCount('products') ?></h5>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="products.php">View Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card shadow-sm border-1">
-                    <div class="card-body">
-                        <p class="text-muted text-uppercase fw-bold">Total Orders</p>
-                        <h5 class="fw-bold text-primary"><?= getCount('orders') ?></h5>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-success text-white mb-4">
+                    <div class="card-body text-uppercase fw-bold">Total Orders</div>
+                    <h5 class="fw-bold"><?= getCount('orders') ?></h5>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="orders.php">View Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card shadow-sm border-1">
-                    <div class="card-body">
-                        <p class="text-muted text-uppercase fw-bold">Customers</p>
-                        <h5 class="fw-bold text-primary"><?= getCount('customers') ?></h5>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-danger text-white mb-4">
+                    <div class="card-body text-uppercase fw-bold">Customers</div>
+                    <h5 class="fw-bold"><?= getCount('customers') ?></h5>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="customers.php">View Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
+
             </div>
-        </div>
-    
-        <!-- Second Row -->
-        <div class="row text-center g-4 mt-4">
-            <div class="col-md-3">
-                <div class="card shadow-sm border-1">
-                    <div class="card-body">
-                        <p class="text-muted text-uppercase fw-bold">Total Orders</p>
-                        <h5 class="fw-bold text-primary"><?= getCount('orders') ?></h5>
+
+            <!-- Second Row -->
+            <div class="row text-center g-4 mt-4">
+                <div class="col-xl-6">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-chart-area me-1"></i>
+                            Area Chart Example
+                        </div>
+                        <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card shadow-sm border-1">
-                    <div class="card-body">
-                        <p class="text-muted text-uppercase fw-bold">Admins</p>
-                        <h5 class="fw-bold text-primary"><?= getCount('admins') ?></h5>
+                <div class="col-xl-6">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-chart-bar me-1"></i>
+                            Bar Chart Example
+                        </div>
+                        <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<?php include('includes/footer.php'); ?>
+    <?php include('includes/footer.php'); ?>
