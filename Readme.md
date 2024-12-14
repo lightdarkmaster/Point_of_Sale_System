@@ -91,7 +91,11 @@ Monitor key metrics at a glance:
 - The database file is located in the `database` folder for easy setup.
 
 ---
-
+### CDN links/ packages:
+- **Sweet Alert**
+    ```bash
+    [Sweet Alert](https://sweetalert2.github.io/)
+---
 Enjoy managing your inventory and sales efficiently with this Simple POS System! 🎉
 
 -- Christian Barbosa --- December 14, 2024 --12:30 --
