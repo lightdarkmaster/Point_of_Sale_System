@@ -79,10 +79,11 @@ Manage all created orders with detailed information:
 
 ## 📊 Dashboard Analytics
 Monitor key metrics at a glance:
-- **Today's Orders Count**
 - **Total Categories**
 - **Total Products**
-- **Total Customers**
+- **Total Orders**
+- **Total Admins/User**
+
 
 ---
 
