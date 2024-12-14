@@ -92,9 +92,16 @@ Monitor key metrics at a glance:
 
 ---
 ### CDN links/ packages:
+- **Bootstrap**
+    ```bash
+    https://getbootstrap.com/
 - **Sweet Alert**
     ```bash
-    [Sweet Alert](https://sweetalert2.github.io/)
+    https://sweetalert2.github.io/
+
+- **jsPDF library**
+    ```bash
+    https://cdnjs.com/libraries/jspdf
 ---
 Enjoy managing your inventory and sales efficiently with this Simple POS System! 🎉
 
