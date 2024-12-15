@@ -82,6 +82,7 @@ Monitor key metrics at a glance:
 - **Total Categories**
 - **Total Products**
 - **Total Orders**
+- **Total Customers**
 
 
 ---
