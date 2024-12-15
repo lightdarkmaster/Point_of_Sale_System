@@ -3,6 +3,24 @@
 A lightweight and user-friendly Point of Sale (POS) system built with PHP and MySQL for managing categories, products, customers, orders, and admin accounts.
 
 ---
+<p align="center">
+  <img src="screenshots/ss1.png" alt="Dashboard" width="900px">
+</p>
+
+<div style="display: flex; justify-content: center; gap: 20px;">
+   <img src="screenshots/ss2.png" alt="Create Order" width="200px">
+   <img src="screenshots/ss3.png" alt="ss3" width="200px">
+   <img src="screenshots/ss4.png" alt="Img" width="200px">
+   <img src="screenshots/ss5.png" alt="Img" width="200px">
+   <img src="screenshots/ss6.png" alt="Image" width="200px">
+   <img src="screenshots/ss7.png" alt="Img" width="200px">
+   <img src="screenshots/ss8.png" alt="Image" width="200px">
+   <img src="screenshots/ss9.png" alt="Image" width="200px">
+   <img src="screenshots/ss10.png" alt="Image" width="200px">
+   <img src="screenshots/ss11.png" alt="Image" width="200px">
+
+
+</div>
 
 ## 📋 Requirements
 - **Host:** Localhost
