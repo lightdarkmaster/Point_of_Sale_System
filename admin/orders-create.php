@@ -171,6 +171,7 @@
                             <option value="">Select Payment</option>
                             <option value="Online Payment">Online Payment</option>
                             <option value="Cash Payment">Cash Payment</option>
+                            <option value="Bank Transfer">Bank Transfer</option>
                         </select>
                     </div>
                     <div class="col-md-4">
