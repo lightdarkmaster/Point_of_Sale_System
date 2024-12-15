@@ -133,6 +133,18 @@ Monitor key metrics at a glance:
     ```bash
     https://cdnjs.com/libraries/jspdf
 ---
-Enjoy managing your inventory and sales efficiently with this Simple POS System! 🎉
+## Licensing
 
+This repository uses dual licensing:
+
+1. **Code**: Licensed under the [MIT License](LICENSE_CODE). This applies to all source code files within the `src/` directory.
+
+2. **Documentation**: Licensed under the [Creative Commons Attribution 4.0 International (CC-BY 4.0)](LICENSE_DOCS). This applies to all files within the `docs/` directory.
+
+### Contributions
+By contributing to this repository, you agree that your contributions will be licensed under the respective license for the relevant content (MIT for code, CC-BY 4.0 for documentation).
+
+---
+
+Enjoy managing your inventory and sales efficiently with this Simple POS System! 🎉
 -- Christian Barbosa --- December 14, 2024 --12:30 --
