@@ -23,6 +23,12 @@ A lightweight and user-friendly Point of Sale (POS) system built with PHP and My
    <img src="screenshots/ss9.png" alt="Image" width="200px">
    <img src="screenshots/ss10.png" alt="Image" width="200px">
    <img src="screenshots/ss11.png" alt="Image" width="200px">
+   <img src="screenshots/ss18.png" alt="Image" width="200px">
+   <img src="screenshots/ss19.png" alt="Image" width="200px">
+   <img src="screenshots/ss20.png" alt="Image" width="200px">
+   <img src="screenshots/ss21.png" alt="Image" width="200px">
+   <img src="screenshots/ss22.png" alt="Image" width="200px">
+
 
 
 
