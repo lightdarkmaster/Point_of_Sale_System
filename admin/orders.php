@@ -40,6 +40,16 @@
                                     ?>
                                     >
                                     Online Payment</option>
+                                    <option value="Bank Transfer"
+                                    <?= 
+                                    isset($_GET['payment_status']) == true 
+                                    ? 
+                                    ($_GET['payment_status'] == 'Bank Transfer' ? 'selected':'')
+                                    :
+                                    ''; 
+                                    ?>
+                                    >
+                                    Bank Transfer</option>
                                 </select>
                             </div>
                             <div class="col-md-4">
