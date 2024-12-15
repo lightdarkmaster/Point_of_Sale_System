@@ -12,7 +12,10 @@ A lightweight and user-friendly Point of Sale (POS) system built with PHP and My
    <img src="screenshots/ss13.png" alt="Login-Page" width="200px">
    <img src="screenshots/ss2.png" alt="Create Order" width="200px">
    <img src="screenshots/ss3.png" alt="ss3" width="200px">
-   <img src="screenshots/ss4.png" alt="Img" width="200px">
+   <img src="screenshots/ss14.png" alt="Image" width="200px">
+   <img src="screenshots/ss15.png" alt="Image" width="200px">
+   <img src="screenshots/ss16.png" alt="Image" width="200px">
+   <img src="screenshots/ss17.png" alt="Image" width="200px">
    <img src="screenshots/ss5.png" alt="Img" width="200px">
    <img src="screenshots/ss6.png" alt="Image" width="200px">
    <img src="screenshots/ss7.png" alt="Img" width="200px">
@@ -20,6 +23,7 @@ A lightweight and user-friendly Point of Sale (POS) system built with PHP and My
    <img src="screenshots/ss9.png" alt="Image" width="200px">
    <img src="screenshots/ss10.png" alt="Image" width="200px">
    <img src="screenshots/ss11.png" alt="Image" width="200px">
+
 
 
 </div>
