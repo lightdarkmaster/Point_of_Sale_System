@@ -33,7 +33,7 @@
                                     <th>Image</th>
                                     <th>Name</th>
                                     <th>Description</th>
-                                    <th>Stacks</th>
+                                    <th>Stocks</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
