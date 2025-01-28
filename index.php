@@ -4,7 +4,7 @@
     <div class="container mt-5">
         <div class="row justify-content-center text-center">
             <div class="col-md-8">
-                <h1 class="display-4 fw-bold text-primary">Point of Sale System</h1>
+                <h1 class="display-4 fw-bold text-primary">Infinite Horizon Point of Sale System</h1>
                 <p class="lead text-secondary mt-3">
                     Simplify your transactions and manage your sales efficiently with our modern Point of Sale system.
                 </p>
