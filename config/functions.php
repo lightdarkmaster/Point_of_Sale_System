@@ -149,14 +149,6 @@ function getCount($tableName){
         return 'Something Went Wrong';
     }
 }
-function optimizeData(){
-    global $conn;
-    $query =  optimizeData();
-    $query_run = mysqli_query($conn, $query);
-    if($query_run){
-        $totalCount = mysqli_num_rows($query_run);
-        return $totalCount;
-}
 //done na nga yaing..
 ?>
 
